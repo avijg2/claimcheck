@@ -1,0 +1,848 @@
+{
+  "n_total": 8000,
+  "n_dev": 1600,
+  "n_test": 1600,
+  "base_rules": 10,
+  "improved_rules": 12,
+  "learned_rules": [
+    {
+      "rule_id": "L01",
+      "name": "learned rule repair_ratio > 0.9",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 0.9,
+      "points": 15,
+      "description": "Data-proposed: repair_ratio above fraud median/quantile."
+    },
+    {
+      "rule_id": "L02",
+      "name": "learned rule days_since_policy_start < 16.5",
+      "field": "days_since_policy_start",
+      "operator": "<",
+      "threshold": 16.5,
+      "points": 15,
+      "description": "Data-proposed: claim very soon after policy start."
+    }
+  ],
+  "dev_f1_after_loop": 0.9333,
+  "rule_loop_log": [
+    {
+      "round": 1,
+      "candidate_id": "C01",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 54.0,
+      "dev_f1": 0.2441,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C02",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 642.5,
+      "dev_f1": 0.3383,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C03",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 1030.2,
+      "dev_f1": 0.4669,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C04",
+      "field": "days_since_policy_start",
+      "operator": "<",
+      "threshold": 16.5,
+      "dev_f1": 0.9041,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C05",
+      "field": "days_since_policy_start",
+      "operator": "<",
+      "threshold": 54.0,
+      "dev_f1": 0.8993,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C06",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 17875.97,
+      "dev_f1": 0.287,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C07",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 23140.88,
+      "dev_f1": 0.4571,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C08",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 27315.09,
+      "dev_f1": 0.6702,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C09",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 14095.93,
+      "dev_f1": 0.2393,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C10",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 20143.44,
+      "dev_f1": 0.4476,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C11",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 26598.06,
+      "dev_f1": 0.805,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C12",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 17161.59,
+      "dev_f1": 0.2222,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C13",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 24388.94,
+      "dev_f1": 0.227,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C14",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 27265.38,
+      "dev_f1": 0.237,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C15",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 0.9,
+      "dev_f1": 0.9189,
+      "kept": true
+    },
+    {
+      "round": 1,
+      "candidate_id": "C16",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 1.0,
+      "dev_f1": 0.9041,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C17",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 1.13,
+      "dev_f1": 0.9041,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C18",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 2.5,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C19",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 4.25,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C20",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 5.0,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C21",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 8.5,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C22",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 14.0,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C23",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 19.0,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C24",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 0.0,
+      "dev_f1": 0.5289,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C25",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 1.0,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C26",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 3.1,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C27",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 2.0,
+      "dev_f1": 0.9116,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C28",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 3.0,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 1,
+      "candidate_id": "C29",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 5.0,
+      "dev_f1": 0.8889,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C01",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 54.0,
+      "dev_f1": 0.2441,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C02",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 642.5,
+      "dev_f1": 0.3465,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C03",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 1030.2,
+      "dev_f1": 0.4775,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C04",
+      "field": "days_since_policy_start",
+      "operator": "<",
+      "threshold": 16.5,
+      "dev_f1": 0.9333,
+      "kept": true
+    },
+    {
+      "round": 2,
+      "candidate_id": "C05",
+      "field": "days_since_policy_start",
+      "operator": "<",
+      "threshold": 54.0,
+      "dev_f1": 0.9281,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C06",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 17875.97,
+      "dev_f1": 0.3022,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C07",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 23140.88,
+      "dev_f1": 0.4789,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C08",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 27315.09,
+      "dev_f1": 0.6974,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C09",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 14095.93,
+      "dev_f1": 0.2523,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C10",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 20143.44,
+      "dev_f1": 0.469,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C11",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 26598.06,
+      "dev_f1": 0.8344,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C12",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 17161.59,
+      "dev_f1": 0.2343,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C13",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 24388.94,
+      "dev_f1": 0.2394,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C14",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 27265.38,
+      "dev_f1": 0.25,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C16",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 1.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C17",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 1.13,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C18",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 2.5,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C19",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 4.25,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C20",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 5.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C21",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 8.5,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C22",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 14.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C23",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 19.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C24",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 0.0,
+      "dev_f1": 0.5528,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C25",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 1.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C26",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 3.1,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C27",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 2.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C28",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 3.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 2,
+      "candidate_id": "C29",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 5.0,
+      "dev_f1": 0.9189,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C01",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 54.0,
+      "dev_f1": 0.25,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C02",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 642.5,
+      "dev_f1": 0.3547,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C03",
+      "field": "days_since_policy_start",
+      "operator": ">",
+      "threshold": 1030.2,
+      "dev_f1": 0.488,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C05",
+      "field": "days_since_policy_start",
+      "operator": "<",
+      "threshold": 54.0,
+      "dev_f1": 0.9281,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C06",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 17875.97,
+      "dev_f1": 0.3097,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C07",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 23140.88,
+      "dev_f1": 0.4895,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C08",
+      "field": "claim_amount",
+      "operator": ">",
+      "threshold": 27315.09,
+      "dev_f1": 0.7107,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C09",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 14095.93,
+      "dev_f1": 0.2588,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C10",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 20143.44,
+      "dev_f1": 0.4795,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C11",
+      "field": "repair_estimate",
+      "operator": ">",
+      "threshold": 26598.06,
+      "dev_f1": 0.8485,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C12",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 17161.59,
+      "dev_f1": 0.2403,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C13",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 24388.94,
+      "dev_f1": 0.2456,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C14",
+      "field": "vehicle_value",
+      "operator": ">",
+      "threshold": 27265.38,
+      "dev_f1": 0.2564,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C16",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 1.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C17",
+      "field": "repair_ratio",
+      "operator": ">",
+      "threshold": 1.13,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C18",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 2.5,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C19",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 4.25,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C20",
+      "field": "claimant_claims_12m",
+      "operator": ">",
+      "threshold": 5.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C21",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 8.5,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C22",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 14.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C23",
+      "field": "shop_claims_30d",
+      "operator": ">",
+      "threshold": 19.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C24",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 0.0,
+      "dev_f1": 0.5645,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C25",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 1.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C26",
+      "field": "prior_claims",
+      "operator": ">",
+      "threshold": 3.1,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C27",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 2.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C28",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 3.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "candidate_id": "C29",
+      "field": "injuries_reported",
+      "operator": ">",
+      "threshold": 5.0,
+      "dev_f1": 0.9333,
+      "kept": false
+    },
+    {
+      "round": 3,
+      "note": "no candidate improved dev F1; stopping"
+    }
+  ],
+  "base_eval": {
+    "1%": {
+      "tp": 11,
+      "fp": 0,
+      "fn": 4,
+      "tn": 1520,
+      "precision": 1.0,
+      "recall": 0.7333,
+      "f1": 0.8462,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2667,
+      "n": 1535,
+      "prevalence": 0.01
+    },
+    "5%": {
+      "tp": 63,
+      "fp": 0,
+      "fn": 17,
+      "tn": 1520,
+      "precision": 1.0,
+      "recall": 0.7875,
+      "f1": 0.8811,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2125,
+      "n": 1600,
+      "prevalence": 0.05
+    }
+  },
+  "improved_eval": {
+    "1%": {
+      "tp": 11,
+      "fp": 0,
+      "fn": 4,
+      "tn": 1520,
+      "precision": 1.0,
+      "recall": 0.7333,
+      "f1": 0.8462,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2667,
+      "n": 1535,
+      "prevalence": 0.01
+    },
+    "5%": {
+      "tp": 66,
+      "fp": 0,
+      "fn": 14,
+      "tn": 1520,
+      "precision": 1.0,
+      "recall": 0.825,
+      "f1": 0.9041,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.175,
+      "n": 1600,
+      "prevalence": 0.05
+    }
+  },
+  "evasion_before_loop": 0.775,
+  "evasion_after_loop": 0.6375
+}
